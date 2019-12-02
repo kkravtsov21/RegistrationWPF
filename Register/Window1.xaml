@@ -1,0 +1,76 @@
+﻿<Window x:Class="Register.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Register"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="Window1" Height="700" Width="800" Name="WindowReg" >
+    <Grid Background="#FFDADADA">
+        <Border Margin="15" MinWidth="400" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="10" MaxWidth="800">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Text="Регистрация нового пользователя" FontSize="24"/>
+
+                </Grid>
+                <Grid Grid.Row="1">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Логин" FontSize="20"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Text="Пароль" FontSize="20"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" materialDesign:HintAssist.Hint="Введите логин" Name="UserName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <PasswordBox Grid.Row="1" Grid.Column="1" materialDesign:HintAssist.Hint="Введите пароль" Name="PassBox" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                    <PasswordBox Grid.Row="1" Grid.Column="2" materialDesign:HintAssist.Hint="Повторите пароль" Margin="5 0 0 0" Name="PassBoxRe" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                    <Button Grid.Row="0" Grid.Column="2" Content="Свободен?" Click="IsNameFree_Click" Margin="0,2,0,3"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text="Реальное имя" FontSize="20"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" materialDesign:HintAssist.Hint="Введите своё ФИО" Name="RealName"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="Email" FontSize="20"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="Введите свой Email" Name="Email"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text="Номер телефона" FontSize="20"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="Номер телефона"  Name="Phone"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text="Пол" FontSize="20"/>
+                    <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1">
+                        <RadioButton IsChecked="True" Margin="3">Мужской</RadioButton>
+                        <RadioButton Margin="3">Женский</RadioButton>
+                        <RadioButton Margin="3">Другое</RadioButton>
+                    </StackPanel>
+                    <CheckBox Grid.Row="6" Content="Я прочитал условия соглашения"/>
+
+
+
+                </Grid>
+                <Grid Grid.Row="2" Margin="0 20 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Зарегистрироваться" Grid.Column="0"  Width="200" Click="Registration" />
+
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

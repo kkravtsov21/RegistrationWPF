@@ -1,0 +1,34 @@
+﻿<Window x:Class="Register.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Register"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="Window3" Height="700" Width="800" Name="WindowHello" >
+    <Grid Background="#FFDADADA">
+        <Border Margin="15" MinWidth="400" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="10" MaxWidth="800">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+
+
+                <TextBlock VerticalAlignment="Center" Grid.Row="0" Text="Привет Username" FontSize="24"/>
+                <TextBlock VerticalAlignment="Center" Grid.Row="1" Text="Не виделись с LastVisitDate" FontSize="24"/>
+
+
+                <Button Content="Отключится" Grid.Row="2"  Width="200" />
+
+                
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
